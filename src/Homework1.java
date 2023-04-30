@@ -22,15 +22,30 @@ public class Homework1 {
                         "Lesson to ........");
         // This is an example comment for Git
         System.out.println();
-        System.out.print("Please, enter your name & surname: ");
-        Scanner scanner = new Scanner(System.in);
-        Scanner.nextline();
-
+        System.out.println("Please, enter your name & surname: ");
+        //Scanner scanner = new Scanner(System.in);
+        //scanner.nextLine();
         // New Comment
 
         String name = "123";
         int age = 34;
         double weight = 88.1;
         char symbol = 'A';
+
+        //Task n 1
+        System.out.println("    |    |  ");
+        System.out.println("____|____|____");
+        System.out.println("    |    |  ");
+        System.out.println("____|____|____");
+        System.out.println("    |    |  ");
+        System.out.println("    |    |  ");
+        System.out.println();
+        //Task n 2
+        System.out.println("    *    ");
+        System.out.println("   ***   ");
+        System.out.println("  *****  ");
+        System.out.println(" ******* ");
+        System.out.println("*********");
+
     }
 }
