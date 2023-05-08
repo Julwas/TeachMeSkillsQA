@@ -6,16 +6,16 @@ public class Homework1 {
     public static void main(String[] args) {
         enter = new Scanner(System.in);
 
-        getMyPersonalDate();
+        getMyPersonalData();
         System.out.println();
         charToInt();
         System.out.println();
-        calculateBim();
+        calculateBMI();
         System.out.println();
 
         enter.close();
     }
-    public static void getMyPersonalDate() {
+    public static void getMyPersonalData() {
 
 
         System.out.print("Please, enter your name :");
@@ -50,7 +50,7 @@ public class Homework1 {
 
     }
 
-    public static void calculateBim() {
+    public static void calculateBMI() {
 
         System.out.print("Please, enter your Weight :");
         double Weight = enter.nextDouble();
