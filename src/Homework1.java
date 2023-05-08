@@ -6,16 +6,17 @@ public class Homework1 {
     public static void main(String[] args) {
         enter = new Scanner(System.in);
 
-        ScannerMyParameters();
+        getMyPersonalDate();
         System.out.println();
-        CharToInt();
+        charToInt();
         System.out.println();
         calculateBim();
         System.out.println();
 
         enter.close();
     }
-    public static void ScannerMyParameters() {
+    public static void getMyPersonalDate() {
+
 
         System.out.print("Please, enter your name :");
         String name = enter.nextLine();
@@ -24,23 +25,23 @@ public class Homework1 {
         String surname = enter.nextLine();
 
         System.out.print("Please, enter your age :");
-        String age = enter.nextLine();
+        int age = enter.nextInt();
 
         System.out.print("Please, enter your height :");
-        String height = enter.nextLine();
+        int height = enter.nextInt();
 
         System.out.print("Please, enter your weight :");
-        String weight = enter.nextLine();
+        double weight = enter.nextDouble();
 
         System.out.println("Name: " + name);
-        System.out.println("Sureame: " + surname);
+        System.out.println("Surname: " + surname);
         System.out.println("Age: " + age);
-        System.out.println("Haight: " + height);
+        System.out.println("Height: " + height);
         System.out.println("Weight: " + weight);
 
     }
 
-    public static void CharToInt() {
+    public static void charToInt() {
 
         char mySymbol = 'A';
         System.out.println("A -" + (int) mySymbol);
@@ -55,7 +56,7 @@ public class Homework1 {
         double Weight = enter.nextDouble();
         System.out.print("Please, enter your Height :");
         double Height = enter.nextDouble();
-        double BMI = Weight / (Height * Height);
+        double BMI = Weight / (Height * Height) * 10000 ;
 
         System.out.println("BMI is " + BMI + " kg/m2");
 
