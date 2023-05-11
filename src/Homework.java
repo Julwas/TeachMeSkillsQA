@@ -9,8 +9,8 @@ public class Homework {
        // rainbowCololr(2);
        // forTask1();
         //forTask2();
-        //forTask3();
-        forTask4();
+        forTask3();
+        //forTask4();
     }
     //task1
     public static void swithcOperator(String month){
@@ -115,21 +115,16 @@ public class Homework {
                 System.out.println(a);
             }
     }
-    //task 3
+    //task 3 not done
     public static void forTask3()
     {
         Scanner nom = new Scanner(System.in);
         System.out.println( "Enter number " );
-        int number = nom.nextInt();
-        {
+        int nomber = nom.nextInt();
 
-          while (number > 1) // логическое условие
-            {
-               System.out.println(number++); // тело, что должно произойти
-            }
-        }
+
     }
-
+  //not done
     public static void forTask4()
     {
         int n =7;
