@@ -2,16 +2,39 @@ import java.util.Scanner;
 public class Homework {
     public static void main(String[] args) {
 
-        // swithcOperator("8");
-        // ifSeasons(2);
-        //evenOrOdd(13);
-        //ifTemperature(5);
-        // rainbowCololr(2);
-        //cycleTask1();
-        //cycleTask2();
-        //integerSum();
-        //cycleTask4();
-        //cycleTask5();
+        System.out.println("Task2");
+        swithcOperator("8");
+        System.out.println();
+        System.out.println("Task2");
+        ifSeasons(2);
+        System.out.println();
+        System.out.println("Task3");
+        evenOrOdd(13);
+        System.out.println();
+        System.out.println("Task4");
+        ifTemperature(5);
+        System.out.println();
+        System.out.println("Task5");
+        rainbowCololr(2);
+        System.out.println();
+        System.out.println("Cycles");
+        System.out.println();
+        System.out.println("Task1");
+        cycleTask1();
+        System.out.println();
+        System.out.println("Task2");
+        cycleTask2();
+        System.out.println();
+        System.out.println("Task3");
+        integerSum();
+        System.out.println();
+        System.out.println("Task4");
+        cycleTask42();
+        System.out.println();
+        System.out.println("Task5");
+        cycleTask5();
+        System.out.println();
+        System.out.println("Task6");
         cycleTask6();
     }
 
@@ -107,19 +130,23 @@ public class Homework {
         System.out.println(sum);
         nom.close();
     }
-    //not done
-    public static void cycleTask4() {
-        int n = 7;
-        for (int i = 0; i < 13; i++) {
-            System.out.println(n);
-            n += 7;
+
+    public static void cycleTask42() {
+        int n = 6;
+        do
+        { System.out.println(++n);
+            n += 6;
         }
+        while (n < 98);
     }
-    public static void cycleTask5() {
+
+    public static void cycleTask5()
+    {
         int n = 0;
-        for (int i = 0; i >= -9; --i) {
+        for (int i = 0; i >= -9; --i)
+        {
             System.out.println(n);
-            n += 5;
+            n -= 5;
         }
     }
     public static void cycleTask6()
