@@ -63,7 +63,6 @@ public class Homework {
             System.out.println("This is : odd");
         }
     }
-
     //task 4
     public static void ifTemperature(int t) {
         if (t > -20 && t <= -5) {
@@ -129,7 +128,7 @@ public class Homework {
         for (int a = 11; a <= 21; a++)
         {
             System.out.println(a1);
-                a1 = a * a;
+                a1 = (int)Math.pow(a , 2);
         }
     }
 }
