@@ -9,10 +9,15 @@ public class Homework1 {
         mas = new Scanner(System.in);
 
       //arrayTask0();
-      arrayTask1();
-        //array2();
+      //Task1();
+        //Task2();
+        //Task3();
+
         mas.close();
     }
+
+
+
     public static void arrayTask0()
         {
 
@@ -36,7 +41,7 @@ public class Homework1 {
             }
         }
         //no done
-        public static void arrayTask1() {
+        public static void Task1() {
             int[] dog = new int[]{5, 18, 3, 2, 2};
             int[] newDog = null;
             System.out.println("Enter integer : ");
@@ -72,10 +77,11 @@ public class Homework1 {
                 }
             }
 //no done
-            public static void array2()
+            public static void Task2()
             {
                 System.out.println("Enter n : ");
-                int[] array = new int[n];
+                int[] array = new int[i];
+
                 for (int i = 0; i < array.length; i++)
                 {
                     array[i] = (int) (Math.random() * 100 );
@@ -85,8 +91,13 @@ public class Homework1 {
                 }
 
             }
-        }
 
+
+    public static void Task3(){
+        int[] one = new int[]{5, 18, 3, 2, 2};
+        int[] two= new int[]{8, 66, 17, 3, 14};
+
+    }
 }
 
 
