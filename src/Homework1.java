@@ -8,9 +8,15 @@ public class Homework1 {
     {
         mas = new Scanner(System.in);
 
-        //arrayTask0();
+        numberIncluded();
+
+        System.out.println();
         //enterNumber();
-        //arrayRandom();
+
+        System.out.println();
+        arrayRandom();
+
+        System.out.println();
         compareArrays();
 
         mas.close();
@@ -18,7 +24,7 @@ public class Homework1 {
 
 
 
-    public static void arrayTask0()
+    public static void numberIncluded()
         {
 
             System.out.println("Enter integer : ");
@@ -79,7 +85,6 @@ public class Homework1 {
                 }
 
         }
-//no done
             public static void arrayRandom()
             {
                 System.out.println("Enter integer : ");
