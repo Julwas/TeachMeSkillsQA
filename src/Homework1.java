@@ -156,7 +156,6 @@ public class Homework1 {
                 System.out.println("Average value array one < Average value array two" );
             }
     }
-
 }
 
 
