@@ -1,51 +1,92 @@
+import java.util.Arrays;
+import java.util.Scanner;
+
 public class Homework1 {
+    static Scanner mas;
+
     public static void main(String[] args)
     {
-        // Этот код выводит сообщение, one-line comment
-        // Legacy Code - код написанный другим программистом и скорее всего
-        // на старой версии языка
-        // Java - это чаще всего 1.8 (Java 8)
+        mas = new Scanner(System.in);
 
-        System.out.print("");
-        System.out.println();
-
-        // new line - symbol, \n
-
-        System.out.print("Please, enter your name:"+"Julia");
-        System.out.println();
-        System.out.println("Please, enter your surname: Wasilewska");
-        System.out.println("Please, enter your ege:36");
-
-        System.out.println("Lat's calculate sume 5+1:"+(5+10));
-        System.out.println("Julia" + " " + "Wasilewska" +
-                ". Welcom to my First " +
-                        "Lesson to ........");
-        // This is an example comment for Git
-        System.out.println();
-        System.out.println("Please, enter your name & surname: ");
-        //Scanner scanner = new Scanner(System.in);
-        //scanner.nextLine();
-        // New Comment
-
-        String name = "123";
-        int age = 34;
-        double weight = 88.1;
-        char symbol = 'A';
-
-        //Task n 1
-        System.out.println("    |    |  ");
-        System.out.println("____|____|____");
-        System.out.println("    |    |  ");
-        System.out.println("____|____|____");
-        System.out.println("    |    |  ");
-        System.out.println("    |    |  ");
-        System.out.println();
-        //Task n 2
-        System.out.println("    *    ");
-        System.out.println("   ***   ");
-        System.out.println("  *****  ");
-        System.out.println(" ******* ");
-        System.out.println("*********");
-
+      //arrayTask0();
+      arrayTask1();
+        //array2();
+        mas.close();
     }
+    public static void arrayTask0()
+        {
+
+            System.out.println("Enter integer : ");
+
+            int i = mas.nextInt();
+            int[] cat = new int[] { 5, 10, 3, 99, 2 };
+            {
+                for (int index = 0; index < cat.length; index++)
+                {
+                    if(i == cat[index])
+                    {
+                        System.out.println( "The number is in the array");
+                        break;
+                    }
+                    else{
+                        System.out.println( "The number is't in the array");
+                        break;
+                    }
+                }
+            }
+        }
+        //no done
+        public static void arrayTask1() {
+            int[] dog = new int[]{5, 18, 3, 2, 2};
+            int[] newDog = null;
+            System.out.println("Enter integer : ");
+            int i = mas.nextInt();
+            {
+                for (int index = 0; index< dog.length; index++)
+                {
+                    if (i == dog[index])
+                    {
+                        int elementToBeDeleted = i;
+
+                        System.out.println("Original Array is: "+Arrays.toString(dog));
+
+                        for (int index1 = 0; index1 < dog.length-1; index1++) {
+                            if(dog[index1] == elementToBeDeleted)
+                            {
+                                newDog = new int[dog.length - 1];
+                                for(int ind = 0; ind < i; ind++){
+                                    newDog[ind] = dog[ind];
+                                }
+                                for(int j = index1; j < dog.length - 1; j++){
+                                    newDog[j] = dog[j+1];
+                                }
+                                break;
+                            }
+                        }
+                        System.out.println("New Array after deleting element = "+elementToBeDeleted+" and shifting: "+ Arrays.toString(newDog));
+
+                    } else
+                    {
+                        System.out.println("There is no such number");
+                    }
+                }
+            }
+//no done
+            public static void array2()
+            {
+                System.out.println("Enter n : ");
+                int[] array = new int[n];
+                for (int i = 0; i < array.length; i++)
+                {
+                    array[i] = (int) (Math.random() * 100 );
+
+                    System.out.print( array[i] + " " );
+
+                }
+
+            }
+        }
+
 }
+
+
