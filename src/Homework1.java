@@ -8,10 +8,10 @@ public class Homework1 {
     {
         mas = new Scanner(System.in);
 
-      //arrayTask0();
-      //Task1();
-        //Task2();
-        //Task3();
+        //arrayTask0();
+        //enterNumber();
+        //arrayRandom();
+        compareArrays();
 
         mas.close();
     }
@@ -41,12 +41,13 @@ public class Homework1 {
             }
         }
         //no done
-        public static void Task1() {
-            int[] dog = new int[]{5, 18, 3, 2, 2};
-            int[] newDog = null;
+        public static void enterNumber()
+        {
             System.out.println("Enter integer : ");
             int i = mas.nextInt();
-            {
+            int[] dog = new int[]{1, 5, 18, 3, 2, 4, 8};
+            int[] newDog = null;
+
                 for (int index = 0; index< dog.length; index++)
                 {
                     if (i == dog[index])
@@ -54,7 +55,7 @@ public class Homework1 {
                         int elementToBeDeleted = i;
 
                         System.out.println("Original Array is: "+Arrays.toString(dog));
-
+                        System.out.println();
                         for (int index1 = 0; index1 < dog.length-1; index1++) {
                             if(dog[index1] == elementToBeDeleted)
                             {
@@ -70,34 +71,88 @@ public class Homework1 {
                         }
                         System.out.println("New Array after deleting element = "+elementToBeDeleted+" and shifting: "+ Arrays.toString(newDog));
 
-                    } else
+                    }
+                    else
                     {
                         System.out.println("There is no such number");
                     }
                 }
-            }
+
+        }
 //no done
-            public static void Task2()
+            public static void arrayRandom()
             {
-                System.out.println("Enter n : ");
+                System.out.println("Enter integer : ");
+
+                int i = mas.nextInt();
                 int[] array = new int[i];
-
-                for (int i = 0; i < array.length; i++)
+                for (int index = 0; index < array.length; index++)
                 {
-                    array[i] = (int) (Math.random() * 100 );
+                    array[index] = (int) (Math.random() * 100);}
+                    System.out.println(Arrays.toString(array));
 
-                    System.out.print( array[i] + " " );
+                    int max = array[0];
+                    for (int index = 0; index < array.length; index++)
+                    {
+                        max = Math.max(max, array[index]);
+                    }
+                    System.out.println("Maximum element: " + max);
 
+                    int min = array[0] + 1;
+                    for (int index = 0; index < array.length; index++)
+                    {
+                        if (array[index] < min)
+                        {
+                            min = array[index];
+                        }
+                    }
+                    System.out.println("Minimum element " + min);
+                    int sum = 0;
+                    for (int index = 0; index < array.length; index++)
+                    {
+                        sum += array[index];
+                    }
+                    double average = (double) sum / i;
+                    System.out.println("Average value : " + average);
                 }
 
-            }
-
-
-    public static void Task3(){
+    public static void compareArrays()
+        {
         int[] one = new int[]{5, 18, 3, 2, 2};
         int[] two= new int[]{8, 66, 17, 3, 14};
+                System.out.println( "Array [] one" + Arrays.toString(one));
+                    System.out.println( "Array [] two" + Arrays.toString(two));
+            int sum = 0;
+            int sumtwo = 0;
+            for (int index = 0; index < one.length; index++)
+            {
+                sum += one[index];
+            }
+            double average = (double) sum / 5;
+            System.out.println("Average value array one: " + average);
 
+            for (int ind = 0; ind < two.length; ind++)
+            {
+                sumtwo += two[ind];
+            }
+            double averagetwo = (double) sumtwo / 5;
+            System.out.println("Average value array two: " + averagetwo);
+
+            if(average > averagetwo)
+            {
+                System.out.println("Average value array one > Average value array two" );
+            }
+            if(average == averagetwo)
+            {
+                System.out.println("Average value array one = Average value array two" );
+            }
+            else
+            {
+                System.out.println("Average value array one < Average value array two" );
+            }
     }
+
 }
+
 
 
