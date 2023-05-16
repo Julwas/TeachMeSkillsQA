@@ -47,41 +47,36 @@ public class Homework1 {
             }
         }
 //nodone
-            public static void deleteArrayElements(){
-                int[] myarray = new int[]{5, 18, 3, 2, 12, 5, 100};
-                int[] newarray;
-                System.out.println("Enter a number to check whether it is in the array: : ");
-                int enteredNumber = mas.nextInt();
-                System.out.print("Original array is: " );
 
-                getArray(myarray);
-                int counter = 0;
+    public static void deleteArrayElements(){
+        int[] mynumbers= new int[]{8, 66, 17, 3, 14, 15};
+        System.out.println("There is an array of x elements with numbers.");
+        System.out.println("Enter number to check whether it is in the array: ");
+        int enteredNumber = mas.nextInt();
+        System.out.print(" " );
+        //getArray(mynumbers);
 
-               System.out.println("This number is not found in array");
-// Сколько раз значение элемента массива совпало со значением enteredNumber
-                for (int index = 0; index < myarray.length; index++) {
-           if (myarray[index] == enteredNumber) {
-               counter++;}
-                    if (counter == 0) {
-                        System.out.println("This number is not found in array");
-                        getArray(myarray);
-                        // 8. Надо создать новый массив и дать ему значение количество элементов по формуле
-//            // 9. originArrray.length - counter (количество совпадений).
-//            // 10. Скопировать все элементы массива с несоответствующим значением в новый массив
-                    }
-                    else{
-                        newarray = new int[myarray.length - counter];
-                        getArray(myarray);
-                        //for( k = 0; k < (myarray.length - counter); k++ )
-                           // if (myarray[index] != enteredNumber){
-                              //  newarray[k] = myarray[index];
-                               // System.out.print(" " + newarray[counter]);
-                                //counter++;
-                            }
-                        }
-
-                        }
+        int counter = 0;
+        for (int index = 0; index < mynumbers.length; index++) {
+            if (mynumbers[index] == enteredNumber) {
+                counter++;
             }
+            }
+        if( counter == 0){
+            getArray(mynumbers);
+            System.out.println("This number is not in  the array ");
+        }
+        else(
+                //System.out.println("There is an array of (x-counter) elements with numbers: ");
+        int[] mynumbers = new int [(mynumbers.length - counter)];
+        for (int i = 0; i< mynumbers.length-counter; i++);
+        System.out.println(mynumbers[i]))
+
+
+        }
+
+
+
 
     public static void getArray(int[] array)
     {
