@@ -8,16 +8,16 @@ public class Homework1 {
     {
         mas = new Scanner(System.in);
 
-        numberIncluded();
+        //numberIncluded();
 
-        System.out.println();
+        //System.out.println();
         //enterNumber();
+        deleteArrayElements();
+        //System.out.println();
+       // arrayRandom();
 
-        System.out.println();
-        arrayRandom();
-
-        System.out.println();
-        compareArrays();
+       // System.out.println();
+        //compareArrays();
 
         mas.close();
     }
@@ -46,80 +46,86 @@ public class Homework1 {
                 }
             }
         }
-        //no done
-        public static void enterNumber()
-        {
-            System.out.println("Enter integer : ");
-            int i = mas.nextInt();
-            int[] dog = new int[]{1, 5, 18, 3, 2, 4, 8};
-            int[] newDog = null;
+//nodone
+            public static void deleteArrayElements(){
+                int[] myarray = new int[]{5, 18, 3, 2, 12, 5, 100};
+                int[] newarray;
+                System.out.println("Enter a number to check whether it is in the array: : ");
+                int enteredNumber = mas.nextInt();
+                System.out.print("Original array is: " );
 
-                for (int index = 0; index< dog.length; index++)
-                {
-                    if (i == dog[index])
-                    {
-                        int elementToBeDeleted = i;
+                getArray(myarray);
+                int counter = 0;
 
-                        System.out.println("Original Array is: "+Arrays.toString(dog));
-                        System.out.println();
-                        for (int index1 = 0; index1 < dog.length-1; index1++) {
-                            if(dog[index1] == elementToBeDeleted)
-                            {
-                                newDog = new int[dog.length - 1];
-                                for(int ind = 0; ind < i; ind++){
-                                    newDog[ind] = dog[ind];
-                                }
-                                for(int j = index1; j < dog.length - 1; j++){
-                                    newDog[j] = dog[j+1];
-                                }
-                                break;
+               System.out.println("This number is not found in array");
+// Сколько раз значение элемента массива совпало со значением enteredNumber
+                for (int index = 0; index < myarray.length; index++) {
+           if (myarray[index] == enteredNumber) {
+               counter++;}
+                    if (counter == 0) {
+                        System.out.println("This number is not found in array");
+                        getArray(myarray);
+                        // 8. Надо создать новый массив и дать ему значение количество элементов по формуле
+//            // 9. originArrray.length - counter (количество совпадений).
+//            // 10. Скопировать все элементы массива с несоответствующим значением в новый массив
+                    }
+                    else{
+                        newarray = new int[myarray.length - counter];
+                        getArray(myarray);
+                        //for( k = 0; k < (myarray.length - counter); k++ )
+                           // if (myarray[index] != enteredNumber){
+                              //  newarray[k] = myarray[index];
+                               // System.out.print(" " + newarray[counter]);
+                                //counter++;
                             }
                         }
-                        System.out.println("New Array after deleting element = "+elementToBeDeleted+" and shifting: "+ Arrays.toString(newDog));
 
-                    }
-                    else
-                    {
-                        System.out.println("There is no such number");
-                    }
-                }
-
-        }
-            public static void arrayRandom()
-            {
-                System.out.println("Enter integer : ");
-
-                int i = mas.nextInt();
-                int[] array = new int[i];
-                for (int index = 0; index < array.length; index++)
-                {
-                    array[index] = (int) (Math.random() * 100);}
-                    System.out.println(Arrays.toString(array));
-
-                    int max = array[0];
-                    for (int index = 0; index < array.length; index++)
-                    {
-                        max = Math.max(max, array[index]);
-                    }
-                    System.out.println("Maximum element: " + max);
-
-                    int min = array[0] + 1;
-                    for (int index = 0; index < array.length; index++)
-                    {
-                        if (array[index] < min)
-                        {
-                            min = array[index];
                         }
-                    }
-                    System.out.println("Minimum element " + min);
-                    int sum = 0;
-                    for (int index = 0; index < array.length; index++)
-                    {
-                        sum += array[index];
-                    }
-                    double average = (double) sum / i;
-                    System.out.println("Average value : " + average);
-                }
+            }
+
+    public static void getArray(int[] array)
+    {
+        for (int index = 0; index < array.length; index++)
+        {
+            System.out.print(array[index] + "; ");
+        }
+    }
+
+    public static void arrayRandom()
+    {
+        System.out.println("Enter integer : ");
+
+        int i = mas.nextInt();
+        int[] array = new int[i];
+        for (int index = 0; index < array.length; index++)
+        {
+            array[index] = (int) (Math.random() * 100);}
+        System.out.println(Arrays.toString(array));
+
+        int max = array[0];
+        for (int index = 0; index < array.length; index++)
+        {
+            max = Math.max(max, array[index]);
+        }
+        System.out.println("Maximum element: " + max);
+
+        int min = array[0] + 1;
+        for (int index = 0; index < array.length; index++)
+        {
+            if (array[index] < min)
+            {
+                min = array[index];
+            }
+        }
+        System.out.println("Minimum element " + min);
+        int sum = 0;
+        for (int index = 0; index < array.length; index++)
+        {
+            sum += array[index];
+        }
+        double average = (double) sum / i;
+        System.out.println("Average value : " + average);
+    }
 
     public static void compareArrays()
         {
