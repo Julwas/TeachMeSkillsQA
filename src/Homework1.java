@@ -69,8 +69,13 @@ public class Homework1 {
         else(
                 //System.out.println("There is an array of (x-counter) elements with numbers: ");
         int[] mynumbers = new int [(mynumbers.length - counter)];
-        for (int i = 0; i< mynumbers.length-counter; i++);
-        System.out.println(mynumbers[i]))
+        for (int i = 0; i< mynumbers.length-counter; i++)
+        {
+            mynumbers[i] = mynumbers[i];
+        }
+        }
+
+        System.out.println(newnumbers[i]);)
 
 
         }
