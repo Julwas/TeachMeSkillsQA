@@ -4,56 +4,50 @@ import java.util.Scanner;
 public class Homework1 {
     static Scanner mas;
 
-    public static void main(String[] args)
-    {
+    public static void main(String[] args) {
         mas = new Scanner(System.in);
 
-        //numberIncluded();
+        numberIncluded();
+        System.out.println();
 
-        //System.out.println();
-        //enterNumber();
         deleteArrayElements();
-        //System.out.println();
-       // arrayRandom();
+        System.out.println();
 
-       // System.out.println();
-        //compareArrays();
+        arrayRandom();
+        System.out.println();
+
+        compareArrays();
 
         mas.close();
     }
 
 
+    public static void numberIncluded() {
 
-    public static void numberIncluded()
+        System.out.println("Enter integer : ");
+
+        int i = mas.nextInt();
+        int[] cat = new int[]{5, 10, 3, 99, 2};
         {
-
-            System.out.println("Enter integer : ");
-
-            int i = mas.nextInt();
-            int[] cat = new int[] { 5, 10, 3, 99, 2 };
-            {
-                for (int index = 0; index < cat.length; index++)
-                {
-                    if(i == cat[index])
-                    {
-                        System.out.println( "The number is in the array");
-                        break;
-                    }
-                    else{
-                        System.out.println( "The number is't in the array");
-                        break;
-                    }
+            for (int index = 0; index < cat.length; index++) {
+                if (i == cat[index]) {
+                    System.out.println("The number is in the array");
+                    break;
+                } else {
+                    System.out.println("The number is't in the array");
+                    break;
                 }
             }
         }
-//nodone
+    }
 
-    public static void deleteArrayElements(){
-        int[] mynumbers= new int[]{8, 66, 17, 3, 14, 15};
+
+    public static void deleteArrayElements() {
+        int[] mynumbers = new int[]{8, 66, 17, 3, 14, 15};
         System.out.println("There is an array of x elements with numbers.");
         System.out.println("Enter number to check whether it is in the array: ");
         int enteredNumber = mas.nextInt();
-        System.out.print(" " );
+        System.out.print(" ");
         //getArray(mynumbers);
 
         int counter = 0;
@@ -61,26 +55,27 @@ public class Homework1 {
             if (mynumbers[index] == enteredNumber) {
                 counter++;
             }
-            }
-        if( counter == 0){
+        }
+        if (counter == 0) {
             getArray(mynumbers);
             System.out.println("This number is not in  the array ");
+        } else {
+            System.out.println("There is an array of (x-counter) elements with numbers: ");
+            int[] newnumbers = new int[(mynumbers.length - counter)];
+            int k;
+            int j=0;
+            k = mynumbers.length - counter;
+
+            for (int i = 0; i < mynumbers.length; i++) {
+                if (mynumbers[i] != enteredNumber) {
+                    newnumbers[j] = mynumbers[i];
+                    j++;
+                }
+            }
+            System.out.println(Arrays.toString(newnumbers));
+
         }
-        else(
-                //System.out.println("There is an array of (x-counter) elements with numbers: ");
-        int[] mynumbers = new int [(mynumbers.length - counter)];
-        for (int i = 0; i< mynumbers.length-counter; i++)
-        {
-            mynumbers[i] = mynumbers[i];
-        }
-        }
-
-        System.out.println(newnumbers[i]);)
-
-
-        }
-
-
+    }
 
 
     public static void getArray(int[] array)
