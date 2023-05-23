@@ -1,7 +1,7 @@
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class Homework1 {
+public class Homework5 {
     static Scanner mas;
 
     public static void main(String[] args) {
