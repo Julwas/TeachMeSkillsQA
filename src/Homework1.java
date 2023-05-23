@@ -10,13 +10,13 @@ public class Homework1 {
         numberIncluded();
         System.out.println();
 
-        deleteArrayElements();
+       // deleteArrayElements();
         System.out.println();
 
-        arrayRandom();
+        //arrayRandom();
         System.out.println();
 
-        compareArrays();
+        //compareArrays();
 
         mas.close();
     }
@@ -25,21 +25,24 @@ public class Homework1 {
     public static void numberIncluded() {
 
         System.out.println("Enter integer : ");
-
+int counter = 0;
         int i = mas.nextInt();
         int[] cat = new int[]{5, 10, 3, 99, 2};
-        {
-            for (int index = 0; index < cat.length; index++) {
-                if (i == cat[index]) {
+
+            for (int index = 0; index < cat.length; index++)
+            {
+                if (i == cat[index])
+                {
                     System.out.println("The number is in the array");
-                    break;
-                } else {
-                    System.out.println("The number is't in the array");
-                    break;
+                    counter++;
                 }
             }
-        }
-    }
+            if  (counter == 0){
+                    System.out.println("The number is't in the array");
+                }
+            }
+
+
 
 
     public static void deleteArrayElements() {
