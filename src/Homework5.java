@@ -7,7 +7,7 @@ public class Homework5 {
     public static void main(String[] args) {
         mas = new Scanner(System.in);
 
-        numberIncluded();
+       // numberIncluded();
         System.out.println();
 
        // deleteArrayElements();
@@ -16,7 +16,7 @@ public class Homework5 {
         //arrayRandom();
         System.out.println();
 
-        //compareArrays();
+        compareArrays();
 
         mas.close();
     }
@@ -42,17 +42,12 @@ int counter = 0;
                 }
             }
 
-
-
-
     public static void deleteArrayElements() {
         int[] mynumbers = new int[]{8, 66, 17, 3, 14, 15};
         System.out.println("There is an array of x elements with numbers.");
         System.out.println("Enter number to check whether it is in the array: ");
         int enteredNumber = mas.nextInt();
         System.out.print(" ");
-        //getArray(mynumbers);
-
         int counter = 0;
         for (int index = 0; index < mynumbers.length; index++) {
             if (mynumbers[index] == enteredNumber) {
@@ -68,7 +63,6 @@ int counter = 0;
             int k;
             int j=0;
             k = mynumbers.length - counter;
-
             for (int i = 0; i < mynumbers.length; i++) {
                 if (mynumbers[i] != enteredNumber) {
                     newnumbers[j] = mynumbers[i];
@@ -76,11 +70,8 @@ int counter = 0;
                 }
             }
             System.out.println(Arrays.toString(newnumbers));
-
         }
     }
-
-
     public static void getArray(int[] array)
     {
         for (int index = 0; index < array.length; index++)
@@ -127,7 +118,7 @@ int counter = 0;
 
     public static void compareArrays()
         {
-        int[] one = new int[]{5, 18, 3, 2, 2};
+        int[] one = new int[]{105, 18, 3, 2, 2};
         int[] two= new int[]{8, 66, 17, 3, 14};
                 System.out.println( "Array [] one" + Arrays.toString(one));
                     System.out.println( "Array [] two" + Arrays.toString(two));
@@ -146,12 +137,12 @@ int counter = 0;
             }
             double averagetwo = (double) sumtwo / 5;
             System.out.println("Average value array two: " + averagetwo);
-
-            if(average > averagetwo)
+            System.out.println();
+            if((double) average > (double) averagetwo)
             {
                 System.out.println("Average value array one > Average value array two" );
             }
-            if(average == averagetwo)
+            else if ((double)average == (double)averagetwo)
             {
                 System.out.println("Average value array one = Average value array two" );
             }
