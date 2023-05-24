@@ -7,13 +7,13 @@ public class Homework5 {
     public static void main(String[] args) {
         mas = new Scanner(System.in);
 
-       // numberIncluded();
+        numberIncluded();
         System.out.println();
 
-       // deleteArrayElements();
+       deleteArrayElements();
         System.out.println();
 
-        //arrayRandom();
+        arrayRandom();
         System.out.println();
 
         compareArrays();
@@ -60,9 +60,7 @@ int counter = 0;
         } else {
             System.out.println("There is an array of (x-counter) elements with numbers: ");
             int[] newnumbers = new int[(mynumbers.length - counter)];
-            int k;
             int j=0;
-            k = mynumbers.length - counter;
             for (int i = 0; i < mynumbers.length; i++) {
                 if (mynumbers[i] != enteredNumber) {
                     newnumbers[j] = mynumbers[i];
