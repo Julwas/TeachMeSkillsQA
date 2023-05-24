@@ -1,5 +1,6 @@
 import java.util.Scanner;
-public class Homework4 {
+public class
+Homework4 {
     public static void main(String[] args) {
 
         System.out.println("Task2");
@@ -37,7 +38,6 @@ public class Homework4 {
         System.out.println("Task6");
         cycleTask6();
     }
-
     //task1
     public static void swithcOperator(String month) {
 
@@ -126,18 +126,20 @@ public class Homework4 {
         Scanner nom = new Scanner(System.in);
         System.out.println("Enter positive integer : ");
         int nomber = nom.nextInt();
-        int sum = (nomber * (nomber + 1)) / 2;
+        int sum = 1;
+        for(int iteration = 1;iteration< nomber; iteration++)
+        {
+            sum +=iteration;
+        }
         System.out.println(sum);
         nom.close();
     }
-
     public static void cycleTask42() {
-        int n = 6;
-        do
+        int n = 7;
+        while (n < 99)
         { System.out.println(++n);
-            n += 6;
+            n += 7;
         }
-        while (n < 98);
     }
 
     public static void cycleTask5()
@@ -151,11 +153,9 @@ public class Homework4 {
     }
     public static void cycleTask6()
     {
-        int a1 = 100;
-        for (int a = 11; a <= 21; a++)
+        for (int a = 10; a <= 20; a++)
         {
-            System.out.println(a1);
-                a1 = (int)Math.pow(a , 2);
+            System.out.println((int)Math.pow(a , 2));
         }
     }
 }
