@@ -1,5 +1,5 @@
 import java.util.Scanner;
-public class Homework {
+public class Homework4 {
     public static void main(String[] args) {
 
         System.out.println("Task2");
