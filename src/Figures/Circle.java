@@ -1,0 +1,20 @@
+package Figures;
+
+public class Circle extends Figure{
+    public Circle(String nameFigure, double r){
+        super (nameFigure);
+    }
+    double r;
+
+    @Override
+     double figureArea() {
+       double s = PI * r;
+        return s;
+    }
+
+    @Override
+     double getfigurePerimeter() {
+        double p = 2 * PI * r;
+        return p;
+    }
+}
