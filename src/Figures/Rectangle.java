@@ -3,6 +3,8 @@ package Figures;
 public class Rectangle extends Figure {
     public Rectangle (String nameFigure, int a, int b){
         super (nameFigure);
+        this.a = a;
+        this.b = b;
     }
     int a;
     int b;

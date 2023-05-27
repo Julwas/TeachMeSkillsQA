@@ -3,6 +3,7 @@ package Figures;
 public class Circle extends Figure{
     public Circle(String nameFigure, double r){
         super (nameFigure);
+        this.r = r;
     }
     double r;
 

@@ -7,6 +7,9 @@ public class Triangle extends Figure {
 
     public Triangle(String nameFigure, int a, int b, int h){
         super (nameFigure);
+        this.a = a;
+        this.b = b;
+        this.h = h;
     }
 
     @Override
