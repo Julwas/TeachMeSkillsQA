@@ -22,5 +22,14 @@ public class Main {
         phone3.receiveCall("Marta");
         phone3.receiveCall("Marta", "821-247-328");
         System.out.println();
+
+        phone1.getINFO();
+        System.out.println();
+        phone2.getINFO();
+        System.out.println();
+        phone3.getINFO();
+        System.out.println();
+
+        phone1.sendMessage("254-869-600", "127-584-877", "900-124-500");
     }
 }

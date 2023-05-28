@@ -11,7 +11,7 @@ public class Phone {
     }
 
 
-    public String getNomber() {
+    public String getNumber() {
         return number;
     }
 
@@ -20,7 +20,7 @@ public class Phone {
     }
 
     public String getInfo() {
-        System.out.println("The phone number is : " + getNomber() + "\n"
+        System.out.println("The phone number is : " + getNumber() + "\n"
                         + "The model is : " + this.model + "\n"
                 + "The weight is : " + this.weight);
         return null;
@@ -34,16 +34,14 @@ public class Phone {
         System.out.println(name + "is calling  " + number);
         return null;
     }
+    public String getINFO() {
+        System.out.println("The phone number is : " + getNumber() + "\n"
+                + "The model is : " + this.model);
+        return null;}
 
-    public void setModel(String model) {
-        this.model = model;
+    public void sendMessage(String ... numbers){
+        for (int i = 0; i < numbers.length; i++) {
+            System.out.println("Send message to number " + numbers[i]);
     }
-
-    public double getWeight() {
-        return weight;
-    }
-
-    public void setWeight(double weight) {
-        this.weight = weight;
-    }
+}
 }
