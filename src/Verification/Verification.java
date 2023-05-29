@@ -4,16 +4,19 @@ import java.util.Scanner;
 
 public class Verification {
     public static void main(String[] args){
-        System.out.println("Please enter your login: ");
-        String login = enter().nextLine();
-        System.out.println("Please enter your password: ");
-        String password = enter().nextLine();
-        System.out.println("Please confirm your password: ");
-        String confirmPassword = enter().nextLine();
+
+            System.out.println("Please enter your login: ");
+            String login = enter().nextLine();
+            System.out.println("Please enter your password: ");
+            String password = enter().nextLine();
+            System.out.println("Please confirm your password: ");
+            String confirmPassword = enter().nextLine();
+        correctData("login ",  "password",  "confirmPassword");
     }
     public static Scanner enter(){
         return new Scanner(System.in);}
-    public static boolean correctData(String login, String password, String confirmPassword) {
+    public static boolean correctData(String login,  String password,  String confirmPassword) {
+
         try {
             checkLogin(login);
             checkPassword(password, confirmPassword);
